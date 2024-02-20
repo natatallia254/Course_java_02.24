@@ -4,17 +4,23 @@ import java.util.Scanner;
 
 public class Lesson3Main {
     public static void main(String[] args) {
-        //task_1();
-        //System.out.println(task_1_1(-20, 3));
-        //task_2(0);
-        //System.out.println(task_3(-10));
-        //task_4("Приветулечки тебе!", 6);
+        task_1();
+        System.out.println(task_1_1(-20, 3));
+        System.out.println();
+        task_2(0);
+        System.out.println(task_3(-10));
+        System.out.println();
+        task_4("Приветулечки тебе!", 6);
         System.out.println(task_5());
-        //task_6();
-        //task_7();
-        //task_8();
-        //task_9();
-        //task_10(15, 10);
+        System.out.println();
+        task_6();
+        System.out.println();
+        task_7();
+        System.out.println();
+        task_8();
+        System.out.println();
+        task_9();
+        task_10(15, 10);
     }
 
     public static void task_1() {
@@ -56,26 +62,27 @@ public class Lesson3Main {
 
     public static void task_4(String txtToPrint, int k) {
         for (int i = 0; i < k; i++)
-            System.out.println(txtToPrint);
+            System.out.print(txtToPrint + " ");
         System.out.println();
     }
 
     public static boolean task_5() {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите год: ");
-        int year = scan.nextInt();
+        //Scanner scan = new Scanner(System.in);
+        //System.out.print("Введите год: ");
+        //int year = scan.nextInt();
+        int year = 2024;
         if (year % 4 == 0) {
             if (year % 100 == 0) {
                 if (year % 400 == 0) {
-                    return true;
-                } else {
-                    return false;
+                    return true; //если год делится на 100 и на 400 одновременно (високосный)
+             } else {
+                    return false;  //если год делится на 100, но не делится на 400 (обычный)
                 }
-            } else {
-                return true;
+          } else {
+                return true;  //если год делится на 4, но не делится на 100 (високосный)
             }
-        } else {
-            return false;
+      } else {
+            return false; //если год не делится на 4 (обычный)
         }
     }
 
@@ -148,5 +155,7 @@ public class Lesson3Main {
         }
         System.out.println();
     }
+
+
 
 }
