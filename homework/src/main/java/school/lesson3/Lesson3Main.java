@@ -31,7 +31,7 @@ public class Lesson3Main {
         int b = sc.nextInt();
         if (a + b >= 10 && a + b <= 20)
             System.out.println("true");
-         else
+        else
             System.out.println("false");
 
         sc.close();
@@ -41,7 +41,7 @@ public class Lesson3Main {
     public static boolean task_1_1(int m, int n) {
         if (m + n >= 10 && m + n <= 20)
             return true;
-         else
+        else
             return false;
     }
 
@@ -53,7 +53,7 @@ public class Lesson3Main {
         System.out.println();
     }
 
-    public static boolean task_3(int q){
+    public static boolean task_3(int q) {
         if (q >= 0)
             return false;
         else
@@ -75,13 +75,13 @@ public class Lesson3Main {
             if (year % 100 == 0) {
                 if (year % 400 == 0) {
                     return true; //если год делится на 100 и на 400 одновременно (високосный)
-             } else {
+                } else {
                     return false;  //если год делится на 100, но не делится на 400 (обычный)
                 }
-          } else {
+            } else {
                 return true;  //если год делится на 4, но не делится на 100 (високосный)
             }
-      } else {
+        } else {
             return false; //если год не делится на 4 (обычный)
         }
     }
@@ -155,7 +155,6 @@ public class Lesson3Main {
         }
         System.out.println();
     }
-
 
 
 }
