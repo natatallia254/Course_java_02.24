@@ -33,5 +33,9 @@ public class Employee {
         Employee employee = new Employee("Александрова Ирина Витальевна", "Учитель", "alekstut@yandex.ru", "8-033-597-78-65", 1000.225, 52);
         System.out.println(employee);
     }
+    public void infoPrint() {
+        Employee employee = new Employee(fullName, position, email, phone, salary, age);
+        System.out.println(employee);
+    }
 
 }

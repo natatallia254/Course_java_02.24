@@ -11,7 +11,8 @@ public class MainEmployee {
         for (int i = 0; i < employee.length; i++) {
             System.out.println(employee[i]);
         }
-
+        for (Employee person : employee)
+            person.infoPrint();
     }
 
 }
