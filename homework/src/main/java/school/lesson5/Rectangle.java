@@ -1,24 +1,17 @@
 package school.lesson5;
 
-public class Rectangle implements Figure {
+public class Rectangle extends Figure implements SquareFigure, PerimeterFigure {
     private double a;   //Одна сторона прямоугольника
     private double b;   //Вторая сторона прямоугольника
-    private String backgrColor;   //Цвет фона прямоугольника
-    private String borderColor;   //Цвет границы прямоугольника
 
-    public Rectangle(double a, double b, String backgrColor, String borderColor) {
+    public Rectangle(String backgrColor, String borderColor, double a, double b) {
+        super(backgrColor, borderColor);
         this.a = a;
         this.b = b;
-        this.backgrColor = backgrColor;
-        this.borderColor = borderColor;
     }
 
-    public String getBackgrColor() {
-        return backgrColor;
-    }
-
-    public String getBorderColor() {
-        return borderColor;
+    public void figureInfo() {   //Цвета фона и границы прямоугольника
+        System.out.println("Цвет фона " + getBackgrColor() + ", цвет границы " + getBorderColor() + " прямоугольника");
     }
 
     @Override

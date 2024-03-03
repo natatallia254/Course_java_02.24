@@ -3,27 +3,27 @@ package school.lesson5;
 public class Dog extends Animal {
     static int countDog;
 
-    public Dog(String name, String color) {   //Кличка собаки, ее цвет
-        super(name, color);
+    public Dog(String name, int distRun, int distSwim) {
+        super(name, distRun, distSwim);
         countDog++;
     }
 
-    public void run(int distRun) {   //Метод бега собак
-        if (distRun > 0 && distRun <= 500)
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" пробежала " + distRun + " метр.");
-        else if (distRun <= 0)
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" не пробежала ни одного метра");
+    public void run() {   //Метод бега собак
+        if (getDistRun() > 0 && getDistRun() <= 500)
+            System.out.println("Собака " + getName() + " пробежала " + getDistRun() + " метр.");
+        else if (getDistRun() <= 0)
+            System.out.println("Собака " + getName() + " не пробежала ни одного метра");
         else
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" физически не могла пробежать " + distRun + " метр.");
+            System.out.println("Собака " + getName() + " физически не могла пробежать " + getDistRun() + " метр.");
     }
 
-    public void swim(int distSwim) {   //Метод плавания собак
-        if (distSwim > 0 && distSwim <= 10)
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" проплыла " + distSwim + " метр.");
-        else if (distSwim <= 0)
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" не проплыла ни одного метра");
+    public void swim() {   //Метод плавания собак
+        if (getDistSwim() > 0 && getDistSwim() <= 10)
+            System.out.println("Собака " + getName() + " проплыла " + getDistSwim() + " метр.");
+        else if (getDistSwim() <= 0)
+            System.out.println("Собака " + getName() + " не проплыла ни одного метра");
         else
-            System.out.println("Собака " + getName() + " цвета \"" + getColor() + "\" физически не могла проплыть " + distSwim + " метр.");
+            System.out.println("Собака " + getName() + " физически не могла проплыть " + getDistSwim() + " метр.");
     }
 
     public void counting() {   //Метод подсчета собак

@@ -2,8 +2,9 @@ package school.lesson5;
 
 public class MainAnimal {
     public static void main(String[] args) {
-        /*Animal animal = new Animal("Дружок", "рыжий");
-        animal.run(300);
+        /*Animal animal = new Animal("Дружок", 300, 200);
+        animal.run();
+        animal.swim();
         animal.counting();
         System.out.println();*/
 
@@ -13,34 +14,35 @@ public class MainAnimal {
         plate.addFood(250);   //а добавим-ка еще еды в тарелку
         System.out.println();
 
-        Cat cat = new Cat("Барсик", "белый", false, 500);   //пример одного кота
-        cat.run(400);   //передаем методу бега кота необходимую дистанцию
-        cat.infoCat();   //информация о коте (его имя, цвет, состояние сытости и аппетит)
-        cat.eatCat(plate);   //передаем коту тарелку с едой (если у кота первоначально нет аппетита (аппетит true), то есть ему не предлагаем)
+        Cat cat = new Cat("Барсик", 400, 500, false, 20);   //пример одного кота
+        cat.run();   //кот бежит
+        cat.swim();   //кот плывет (не умеет)
+        cat.eatCat(plate);   //передаем коту тарелку с едой
         cat.counting();   //подсчитываем (пока должен быть единственный кот)
         System.out.println();
 
         Cat[] catArray = new Cat[7];   //массив котов
-        catArray[0] = new Cat("Марсик", "белый", true, 200);
-        catArray[1] = new Cat("Барсик", "рыжий", false, 100);
-        catArray[2] = new Cat("Кляксик", "черно-белый", false, 150);
-        catArray[3] = new Cat("Фрося", "черно-белый", false, 1000);
-        catArray[4] = new Cat("Васька", "черный", false, 20);
-        catArray[5] = new Cat("Белочка", "рыжий", true, 70);
-        catArray[6] = new Cat("Алиса", "рыже-коричневый", false, 120);
+        catArray[0] = new Cat("Марсик", 100, 10, false, 100);
+        catArray[1] = new Cat("Красавчик", 200, 20, false, 0);
+        catArray[2] = new Cat("Кляксик", 300, 30, true, 70);
+        catArray[3] = new Cat("Фрося", 400, 40, false, 1000);
+        catArray[4] = new Cat("Васька", 500, 50, false, 100);
+        catArray[5] = new Cat("Белочка", 600, 60, false, 55);
+        catArray[6] = new Cat("Алиса", 0, 70, false, 120);
 
         for (int i = 0; i < catArray.length; i++) {
+            catArray[i].run();   //кот бежит
+            catArray[i].swim();   //кот плывет (не умеет)
             plate.getFood();   //получение количества еды из тарелки
-            catArray[i].infoCat();   //информация о каждом коте массива котов (его имя, цвет, состояние сытости и аппетит)
-            catArray[i].eatCat(plate);   //передаем каждому коту из массива тарелку (если у кота первоначально нет аппетита (аппетит true), то есть ему не предлагаем)
+            catArray[i].eatCat(plate);   //передаем каждому коту из массива тарелку
             System.out.println();
         }
         cat.counting();   //подсчитываем количество всех созданных котов (в массиве и не в массиве)
         System.out.println();
 
-        Dog dog = new Dog("Бобик", "черный");   //пример одной собаки
-        dog.run(700);   //передаем методу бега собаки необходимую дистанцию
-        dog.swim(9);   //передаем методу плавания собаки необходимую дистанцию
+        Dog dog = new Dog("Бобик", 501, 9);   //пример одной собаки
+        dog.run();   //собака бежит
+        dog.swim();   //собака плывет
         dog.counting();   //подсчитываем собак (пока создали единственную собаку)
         System.out.println();
     }

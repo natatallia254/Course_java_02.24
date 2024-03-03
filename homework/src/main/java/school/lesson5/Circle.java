@@ -1,22 +1,15 @@
 package school.lesson5;
 
-public class Circle implements Figure {
+public class Circle extends Figure implements SquareFigure, PerimeterFigure {
     private double r;   //Радиус круга
-    private String backgrColor;   //Цвет фона круга
-    private String borderColor;   //Цвет границы круга
 
-    public Circle(double r, String backgrColor, String borderColor) {
+    public Circle(String backgrColor, String borderColor, double r) {
+        super(backgrColor, borderColor);
         this.r = r;
-        this.backgrColor = backgrColor;
-        this.borderColor = borderColor;
     }
 
-    public String getBackgrColor() {
-        return backgrColor;
-    }
-
-    public String getBorderColor() {
-        return borderColor;
+    public void figureInfo() {   //Цвета фона и границы круга
+        System.out.println("Цвет фона " + getBackgrColor() + ", цвет границы " + getBorderColor() + " круга");
     }
 
     @Override

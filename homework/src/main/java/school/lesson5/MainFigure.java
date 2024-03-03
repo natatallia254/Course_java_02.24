@@ -3,27 +3,26 @@ package school.lesson5;
 public class MainFigure {
     public static void main(String[] args) {
         //Круг
-        Circle circle = new Circle(7.8745, "зеленый", "красный");
+        System.out.println("Круг");
+        Circle circle = new Circle("зеленый", "красный", 7.8745);
         circle.perimeter();
         circle.square();
-        System.out.println("Цвет фона круга: " + circle.getBackgrColor());
-        System.out.println("Цвет границы круга: " + circle.getBorderColor());
+        circle.figureInfo();
         System.out.println();
 
         //Прямоугольник
-        Rectangle rectangle = new Rectangle(25.8, 70, "белый", "черный");
+        System.out.println("Прямоугольник");
+        Rectangle rectangle = new Rectangle("белый", "черный", 25.8, 70);
         rectangle.perimeter();
         rectangle.square();
-        System.out.println("Цвет фона прямоугольника: " + rectangle.getBackgrColor());
-        System.out.println("Цвет границы прямоугольника: " + rectangle.getBorderColor());
+        rectangle.figureInfo();
         System.out.println();
 
         //Треугольник
-        Triangle triangle = new Triangle(7.896, 3.741, 9.87423, "оранжевый", "голубой");
+        System.out.println("Треугольник");
+        Triangle triangle = new Triangle("оранжевый", "голубой", 9.87423, 7.896, 3.741);
         triangle.perimeter();
         triangle.square();
-        System.out.println("Цвет фона треугольника: " + triangle.getBackgrColor());
-        System.out.println("Цвет границы треугольника: " + triangle.getBorderColor());
-        System.out.println();
+        triangle.figureInfo();
     }
 }

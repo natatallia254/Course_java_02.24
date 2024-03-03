@@ -1,26 +1,19 @@
 package school.lesson5;
 
-public class Triangle implements Figure {
+public class Triangle extends Figure implements SquareFigure, PerimeterFigure {
     private double a;   //Одна сторона треугольника
     private double b;   //Вторая сторона треугольника
     private double c;   //Третья сторона треугольника
-    private String backgrColor;   //Цвет фона треугольника
-    private String borderColor;   //Цвет границы треугольника
 
-    public Triangle(double a, double b, double c, String backgrColor, String borderColor) {
+    public Triangle(String backgrColor, String borderColor, double a, double b, double c) {
+        super(backgrColor, borderColor);
         this.a = a;
         this.b = b;
         this.c = c;
-        this.backgrColor = backgrColor;
-        this.borderColor = borderColor;
     }
 
-    public String getBackgrColor() {
-        return backgrColor;
-    }
-
-    public String getBorderColor() {
-        return borderColor;
+    public void figureInfo() {   //Цвета фона и границы треугольника
+        System.out.println("Цвет фона " + getBackgrColor() + ", цвет границы " + getBorderColor() + " треугольника");
     }
 
     @Override
