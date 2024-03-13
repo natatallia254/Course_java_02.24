@@ -16,10 +16,10 @@ public class PhoneBook {
         System.out.println("Телефон абонента " + name + result);
 
         //Вносим в HashSet номера телефонов каждого из абонентов:
-        HashSet phones = new HashSet();
+        HashSet<String> phones = new HashSet<>();
         for (Map.Entry element : directory.entrySet()) {
             if (element.getValue().equals(name)) {
-                phones.add(element.getKey());
+                phones.add((String) element.getKey());
             }
         }
         System.out.print(name + " / Номер(а) телефона(ов): " + phones);
