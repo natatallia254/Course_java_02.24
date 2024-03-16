@@ -10,6 +10,8 @@ public class TaskTwo {
         System.out.println("Заданная коллекция:\n" + list);
 
         long result = list.stream()
+                //.filter(l -> l.contentEquals("High"))
+                //.filter("High" :: equals)
                 .filter(w -> w == "High")
                 .count();
         System.out.println("Объект \"High\" встречается в колекции " + result + " раз");
