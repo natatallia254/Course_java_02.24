@@ -22,7 +22,7 @@ public class Box<T extends Fruit> {
 
     public boolean compare(Box<?> box) {
         //return Math.abs(getWeight() - box.getWeight()) < 0.0001;   //учтем погрешность при взвешивании
-        return Float.compare(getWeight(),box.getWeight()) == 0;
+        return Float.compare(getWeight(), box.getWeight()) == 0;
     }
 
     public void transfer(Box<T> box) {
