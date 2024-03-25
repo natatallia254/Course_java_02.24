@@ -1,0 +1,15 @@
+import org.testng.annotations.Test;
+import school.lesson_12_testng.Factorial;
+
+import static org.testng.Assert.assertTrue;
+
+public class FactorialTest {
+    Factorial factorial = new Factorial();
+
+    @Test
+    public void testFactorial() {
+        int result = factorial.count(5);
+        //assertEquals(120, result);
+        assertTrue(result == 120);
+    }
+}
